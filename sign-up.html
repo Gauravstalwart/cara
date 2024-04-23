@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech2etc Ecommerce Tutorial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./slick/slick.css">
+    <link rel="stylesheet" href="./slick/slick-theme.css">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        * {box-sizing: border-box}
+        
+        /* Full-width input fields */
+        input[type=text], input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          display: inline-block;
+          border: none;
+          background: #f1f1f1;
+        }
+        
+        input[type=text]:focus, input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+        
+        hr {
+          border: 1px solid #f1f1f1;
+          margin-bottom: 25px;
+        }
+        .sign-up h2{text-align: center; margin-bottom: 40px;}
+        
+        /* Set a style for all buttons */
+        .sign-up .container button {
+          background-color: #088178;
+          color: white;
+          padding: 14px 20px;
+          margin: 8px 0;
+          border: none;
+          cursor: pointer;
+          width: 100%;
+          opacity: 0.9;
+        }
+        
+        .sign-up .container button:hover {
+          opacity:1;
+        }
+        
+        /* Extra styles for the cancel button */
+        .sign-up .container .cancelbtn {
+          padding: 14px 20px;
+          background-color: #f44336;
+        }
+        
+        /* Float cancel and signup buttons and add an equal width */
+        .sign-up .container .cancelbtn, .sign-up .container .signupbtn {
+          float: left;
+          width: 50%;
+        }
+        
+        /* Add padding to container elements */
+        .container {
+          padding: 16px;
+        }
+        
+        /* Clear floats */
+        .clearfix::after {
+          content: "";
+          clear: both;
+          display: table;
+        }
+        
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+          .cancelbtn, .signupbtn {
+             width: 100%;
+          }
+        }
+        </style>
+</head>
+
+<body>
+<section class="header">
+        <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+<div>       
+    <ul class="navbar">
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+</div>
+<div id="Desktop">
+    <div class="user">
+        <i class="fa-solid fa-user" style="font-size: 20px;"></i>
+        <div class="login">
+            <a href="login.html" class="btn">Login</a>
+            <a href="sign-up.html" class="btn">Sign Up</a>
+        </div>
+        <span>Login / Sign Up</span>
+    </div>
+    <div class="cart">
+        <a href="cart.html"><i class="fa fa-shopping-bag fa-2x" style="font-size: 20px;"></i></a>
+    </div>
+    <i class="fa-sharp fa-solid fa-xmark"></i>
+</div>
+<div id="mobile">
+    <div class="user">
+        <i class="fa-solid fa-user" style="font-size: 26px;"></i>
+        <div class="login">
+            <a href="login.html" class="btn">Login</a>
+            <a href="sign-up.html" class="btn">Sign Up</a>
+        </div>
+        <span>Login / Sign Up</span>
+    </div>
+    <a href="cart.html"><i class="fa fa-shopping-bag fa-2x" style="font-size: 26px;"></i></a>
+    <i id="bar" class="fa-solid fa-outdent" style="font-size: 26px;"></i>
+</div>
+</section>
+  
+
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super Value Deals</h2>
+        <h1>On All Products</h1>
+        <p>Save more with coupans & up to 70%off!</p>
+        <button>Shop Now</button>
+    </section>
+
+    <section id="sign-up" class="sign-up">
+        <h2>sign-up</h2>
+        <form action="/action_page.php" style="border:1px solid #ccc">
+            <div class="container">
+              <p>Please fill in this form to create an account.</p>
+              <hr>
+              <div class="f-l-name">
+                <div class="f-name">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                </div>
+                <div class="l-name">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                </div>
+            </div>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              
+              <label>
+                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+              </label>
+              
+              <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+          
+              <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+    </section>
+
+    <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext">
+            <h4>Sing Up For Newsletters</h4>
+            <p>Get E-mail Updates About Our latest shop and<span> special offers</span></p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="your email address">
+            <button class="normal">Sing Up</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/logo.png" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> No-15,Gayatri Socity,Near BOB Bank,Madhuram,Junagadh.</p>
+            <p><strong>Phone:</strong>(+91) 6353183845</p>
+            <p><strong>Hours:</strong>09:00-05:00,Mon-Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-pinterest-p"></i>
+                    <i class="fa fa-youtube-play"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivary Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition </a>
+            <a href="#">Contact Us </a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sing In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="colinstall">
+            <h4>Install App</h4>
+            <p>From App Store  OR Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways </p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+
+
+        <div class="copyright">
+            <p>@2023,Tech2 etc  -  HTML CSS Ecommerce Template</p>
+        </div>
+    </footer>
+
+    <script src="script.min.js"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

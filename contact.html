@@ -17,17 +17,37 @@
         <div>
             <ul class="navbar">
                 <i class="fa-sharp fa-solid fa-xmark"></i>
-                <li><a class="active" href="index.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="shop.html">Shop</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
             </ul>
         </div>
         <div id="Desktop">
-            <a href="cart.html"><i class="fa fa-shopping-bag fa-2x" style="font-size: 20px;"></i></a>
+            <div class="user">
+                <i class="fa-solid fa-user" style="font-size: 20px;"></i>
+                <div class="login">
+                    <a href="login.html" class="btn">Login</a>
+                    <a href="sign-up.html" class="btn">Sign Up</a>
+                </div>
+                <span>Login / Sign Up</span>
+            </div>
+            <div class="cart">
+                <a href="cart.html"><i class="fa fa-shopping-bag fa-2x" style="font-size: 20px;"></i></a>
+            </div>
+            <i class="fa-sharp fa-solid fa-xmark"></i>
         </div>
         <div id="mobile">
+            <div class="user">
+                <i class="fa-solid fa-user" style="font-size: 26px;"></i>
+                <div class="login">
+                    <a href="login.html" class="btn">Login</a>
+                    <a href="sign-up.html" class="btn">Sign Up</a>
+                </div>
+                <span>Login / Sign Up</span>
+            </div>
             <a href="cart.html"><i class="fa fa-shopping-bag fa-2x" style="font-size: 26px;"></i></a>
             <i id="bar" class="fa-solid fa-outdent" style="font-size: 26px;"></i>
         </div>
@@ -43,34 +63,50 @@
     <section id="contact" class="section-p1 contact-form">
         <h2> Contact US</h2>
 
-        <form class="contact-forms" action="/action_page.php">
-            <div class="f-l-name">
-                <div class="f-name">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div class="contact-row">
+            <div class="contact-col">
+                <div class="contact-details">
+                    <h4>Address:</h4>
+                    <p>l-4, Block no-194,</p>
+                    <p>Near College Road,</p>
+                    <p>opposite  of SBI Bank,</p>
+                    <p>Gujarat, Junagadh - 362001.</p>
+                    <p>We are looking forward to your contact.</p>
+                    <p class="con-no">We are there for you by phone on +12 34 56 78 90.</p>
                 </div>
-                <div class="l-name">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <div class="con-soci-icon">
+                    
                 </div>
             </div>
-            <label for="Phone No">Last Name</label>
-            <input id="phone" required="" type="text" name="phone" placeholder="+1 (XXX) XXX XXXX" class="input-text">
-
-            <label for="country">Country</label>
-            <select id="country" name="country">
-                <option value="australia">Australia</option>
-                <option value="canada">Canada</option>
-                <option value="usa">INIDA</option>
-                <option value="usa">UK</option>
-                <option value="usa">USA</option>
-            </select>
-
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-            <input type="submit" value="Submit">
-        </form>
+            <div class="contact-col">
+                <form class="contact-forms" action="/action_page.php">
+                    <div class="f-l-name">
+                        <div class="f-name">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                        <div class="l-name">
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                           
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="australia">Australia</option>
+                        <option value="canada">Canada</option>
+                        <option value="usa">INIDA</option>
+                        <option value="usa">UK</option>
+                        <option value="usa">USA</option>
+                    </select>
+        
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
     </section>
     
 

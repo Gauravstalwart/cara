@@ -574,7 +574,8 @@ a {
 }
 #contact h2{margin-bottom:20px; text-align: center;margin-top: 20px;}
 .contact-form{padding: 40px 20rem;}
-.contact-forms .f-l-name {
+.login-form, .sign-up{padding: 40px 30rem;}
+.contact-forms .f-l-name, .sign-up .f-l-name {
   display: flex;
   gap: 15px;
   align-items: center;
@@ -688,9 +689,65 @@ input[type=submit]:hover {
 .blog-row .blog-col .bolg-text {padding: 20px 0;}
 .blog-row .blog-col .bolg-text .blog-heading {display: flex; align-items: center;justify-content: space-between;}
 
+.contact-row{display: flex; flex-wrap: nowrap;padding-top: 40px;}
+.contact-row .contact-col{width: 50%;}
+
+.user span {
+  display: none;
+}
+div#Desktop {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.login {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 110px;
+  display: none;
+  transition: .3s all ease-in;
+  padding-top: 50%;
+}
+.user:hover .login {
+  display: flex;
+}
+.login .btn{
+  background: #e3e3f3;
+  padding: 15px 20px;
+  border: 1px solid #676767;
+  text-decoration: none;
+  font-family: "Spartan", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+}
+.cart {
+  z-index: 9;
+}
+
+/* login */
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+
+
 /* start media query  */
 @media (max-width:1440px){
-  .contact-form {
+  .contact-form,.login-form {
     padding: 40px 10rem;
 }
 }
@@ -729,13 +786,16 @@ input[type=submit]:hover {
     #mobile {
       display: flex;
       align-items: center;
-      width: 18%;
+      width: 25%;
       justify-content: space-between;
+      gap:5px;
+      position: relative;
+      z-index: -1;
     }
-    #Desktop i.fa.fa-shopping-bag {
-      display: none;
+    #Desktop {
+      display: none !important;
     }
-    .header, .section-p1, #banner3, #hero,#contact,#hero-about {
+    .header, .section-p1, #banner3, #hero,#contact,#hero-about,#login-form,#sign-up  {
       padding: 20px;
     }
     #hero, #hero-about {
@@ -751,8 +811,16 @@ input[type=submit]:hover {
       line-height: 50px;
     }
     #hero h2, #hero-about h2 {
-      font-size: 30px;
+      font-size: 24px;
       line-height: 35px;
+    }
+    h1 {
+      font-size: 35px;
+      line-height: 40px;
+    }
+    #hero button {
+      padding: 12px 70px 12px 34px;
+      background-size: contain;
     }
     #product1 .pro-container {
       gap: 4%;
@@ -799,5 +867,12 @@ input[type=submit]:hover {
       margin-bottom: 40px;
     }
     .blog-row .blog-col{width:100%;margin: 10px 0;}
-
+    .contact-row { 
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      gap: 30px;
+    }
+    .contact-row .contact-col {
+      width: 100%;
+    }
 }
